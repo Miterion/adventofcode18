@@ -21,7 +21,11 @@ fn main() {
         Some("2") => {
             let submatches = matches.subcommand_matches("2").unwrap();
             let mut content = input_to_file(submatches);
-            days::second::second_day(&content);
+            if submatches.is_present("two") {
+                days::second::second_day_part_two(&content);
+            } else {
+                days::second::second_day(&content);
+            }
         }
         _ => panic!("Bug in clap!"),
     }

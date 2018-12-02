@@ -17,6 +17,11 @@ pub fn build_cli() -> App<'static, 'static> {
         ).subcommand(
             SubCommand::with_name("2")
                 .about("Second day")
-                .arg(Arg::with_name("INPUT").required(true)),
+                .arg(Arg::with_name("INPUT").required(true))
+                .arg(
+                    Arg::with_name("two")
+                        .short("t")
+                        .help("Compute the value of the second part"),
+                ),
         );
 }

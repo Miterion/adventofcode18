@@ -24,3 +24,26 @@ pub fn second_day(input: &String) {
 
     println!("The checksum is: {}", three_times * two_times);
 }
+
+
+pub fn second_day_part_two(input: &String){
+    let mut list_of_words: Vec<String> = Vec::new();
+    for id in input.split_whitespace() {
+        for visited in list_of_words.iter() {
+            let mut iterator = id.chars();
+            let mut same = 0;
+            for character in visited.chars(){
+                if iterator.next().unwrap() == character {
+                    same += 1;
+                }
+            }
+            if same == id.len() - 1 {
+                println!("Found the words: {} and {}", id, visited);
+                let mut string_without_char = String::from(id);
+                string_without_char.retain(|c| visited.contains(c));
+                println!("String without different character: {}", string_without_char);
+            }
+        }
+        list_of_words.push(String::from(id));
+    }
+}
