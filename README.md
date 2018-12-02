@@ -4,18 +4,23 @@ This is my implementation for this years advent of code. Since I use this as a t
 ## Usage
 Compile and run with `cargo run`
 ```
-Advent of Code cli 1.1
+Advent of Code cli 1.2
 Heiko Carrasco <heiko.carrasco@yahoo.com>
 
 USAGE:
-    advent <SUBCOMMAND>
+    Advent of Code cli <SUBCOMMAND>
 
 FLAGS:
-    -h, --help       Prints help information
-    -V, --version    Prints version information
+    -h, --help       
+            Prints help information
+
+    -V, --version    
+            Prints version information
+
 
 SUBCOMMANDS:
     1       First day
+    2       Second day
     help    Prints this message or the help of the given subcommand(s)
 ```
 
