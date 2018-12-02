@@ -1,25 +1,12 @@
 mod days;
+mod cli;
 
 extern crate clap;
-use clap::{App, AppSettings, Arg, SubCommand};
 use std::fs::File;
 use std::io::prelude::*;
 
 fn main() {
-    let matches = App::new("Advent of Code cli")
-        .version("1.1")
-        .author("Heiko Carrasco <heiko.carrasco@yahoo.com>")
-        .setting(AppSettings::SubcommandRequiredElseHelp)
-        .subcommand(
-            SubCommand::with_name("1")
-                .about("First day")
-                .arg(Arg::with_name("INPUT").required(true))
-                .arg(
-                    Arg::with_name("two")
-                        .short("t")
-                        .help("Compute the value of the second part"),
-                ),
-        ).get_matches();
+    let matches = cli::build_cli().get_matches();
 
     match matches.subcommand_name() {
         Some("1") => {
