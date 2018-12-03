@@ -4,7 +4,7 @@ This is my implementation for this years advent of code. Since I use this as a t
 ## Usage
 Compile and run with `cargo run`
 ```
-Advent of Code cli 1.2
+Advent of Code cli 1.3
 Heiko Carrasco <heiko.carrasco@yahoo.com>
 
 USAGE:
@@ -21,6 +21,7 @@ FLAGS:
 SUBCOMMANDS:
     1       First day
     2       Second day
+    3       Third day
     help    Prints this message or the help of the given subcommand(s)
 ```
 
