@@ -8,11 +8,14 @@ Advent of Code cli 1.3
 Heiko Carrasco <heiko.carrasco@yahoo.com>
 
 USAGE:
-    Advent of Code cli <SUBCOMMAND>
+    Advent of Code cli [FLAGS] <SUBCOMMAND>
 
 FLAGS:
     -h, --help       
             Prints help information
+
+    -t               
+            Compute the value of the second part
 
     -V, --version    
             Prints version information

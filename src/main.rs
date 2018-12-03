@@ -12,7 +12,7 @@ fn main() {
         Some("1") => {
             let submatches = matches.subcommand_matches("1").unwrap();
             let mut content = input_to_file(submatches);
-            if submatches.is_present("two") {
+            if matches.is_present("two") {
                 days::first::first_day_part_two(&content);
             } else {
                 days::first::first_day(&content);
@@ -21,7 +21,7 @@ fn main() {
         Some("2") => {
             let submatches = matches.subcommand_matches("2").unwrap();
             let mut content = input_to_file(submatches);
-            if submatches.is_present("two") {
+            if matches.is_present("two") {
                 days::second::second_day_part_two(&content);
             } else {
                 days::second::second_day(&content);
@@ -30,7 +30,7 @@ fn main() {
         Some("3") =>{
             let submatches = matches.subcommand_matches("3").unwrap();
             let mut content = input_to_file(submatches);
-            if submatches.is_present("two") {
+            if matches.is_present("two") {
                 days::third::third_day_part_two(&content);
             } else {
                 days::third::third_day(&content);
