@@ -2,7 +2,7 @@ use clap::{App, AppSettings, Arg, SubCommand};
 
 pub fn build_cli() -> App<'static, 'static> {
     return App::new("Advent of Code cli")
-        .version("1.3")
+        .version("1.4")
         .author("Heiko Carrasco <heiko.carrasco@yahoo.com>")
         .setting(AppSettings::SubcommandRequiredElseHelp)
         .setting(AppSettings::ColoredHelp)
@@ -21,6 +21,10 @@ pub fn build_cli() -> App<'static, 'static> {
         ).subcommand(
             SubCommand::with_name("3")
                 .about("Third day")
+                .arg(Arg::with_name("INPUT").required(true))
+        ).subcommand(
+            SubCommand::with_name("4")
+                .about("Fourth day")
                 .arg(Arg::with_name("INPUT").required(true))
         );
 }

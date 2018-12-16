@@ -2,6 +2,7 @@ mod cli;
 mod days;
 
 extern crate clap;
+extern crate chrono;
 use std::fs::File;
 use std::io::prelude::*;
 
@@ -34,6 +35,15 @@ fn main() {
                 days::third::third_day_part_two(&content);
             } else {
                 days::third::third_day(&content);
+            }
+        }
+         Some("4") =>{
+            let submatches = matches.subcommand_matches("4").unwrap();
+            let mut content = input_to_file(submatches);
+            if matches.is_present("two") {
+                days::fourth::fourth_day_part_two(&content);
+            } else {
+                days::fourth::fourth_day(&content);
             }
         }
         _ => panic!("Bug in clap!"),
