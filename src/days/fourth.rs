@@ -112,6 +112,7 @@ fn create_event_list(input: &String, events: &mut Vec<Event>) {
 fn create_shifts(events: & Vec<Event>, shifts: &mut HashMap<i32, Vec<Shift>>) {
     // First shift
     let mut sleep_start: NaiveDateTime = NaiveDate::from_ymd(2016, 7, 8).and_hms(9, 10, 11);
+    #[allow(unused_assignments)]
     let mut sleep_end: NaiveDateTime = NaiveDate::from_ymd(2016, 7, 8).and_hms(9, 10, 11);
     let mut guard: i32 = get_id(&events[0].text);
     for event in events[1..].iter() {
