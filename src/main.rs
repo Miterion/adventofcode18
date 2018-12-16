@@ -46,6 +46,15 @@ fn main() {
                 days::fourth::fourth_day(&content);
             }
         }
+         Some("5") =>{
+            let submatches = matches.subcommand_matches("5").unwrap();
+            let mut content = input_to_file(submatches);
+            if matches.is_present("two") {
+                days::fifth::fifth_day_part_two(&content);
+            } else {
+                days::fifth::fifth_day(&content);
+            }
+        }
         _ => panic!("Bug in clap!"),
     }
 }
